@@ -1,0 +1,21 @@
+<html>
+<head>
+    <!-- Firebase -->
+    <script src="https://cdn.firebase.com/js/client/2.0.2/firebase.js"></script>
+
+    <!-- ACE and its JavaScript mode and theme files -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.1.3/ace.js"></script>
+
+    <!-- Firepad -->
+    <link rel="stylesheet" href="https://cdn.firebase.com/libs/firepad/1.1.0/firepad.css" />
+    <script src="https://cdn.firebase.com/libs/firepad/1.1.0/firepad.min.js"></script>
+</head>
+<body>
+    <div id="firepad"></div>
+    <script>
+    var firepadRef = new Firebase('https://sniplive.firebaseio.com/firepads/home');
+    var editor = ace.edit('firepad');
+    var firepad = Firepad.fromACE(firepadRef, editor);
+    </script>
+</body>
+</html>
